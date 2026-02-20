@@ -2,97 +2,115 @@
 @import "../parciales/responsive";
 @import "../parciales/reset";
 
-/*----------ESTILOS CONTACTO---------*/
-.main {
-  margin: 0;
-  background-image: url(/assets/portada.webp);
-  background-size: cover;
-  background-position: center;
-  opacity: 0.7;
+.contact-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("../assets/portada.webp") center / cover no-repeat;
 }
-
-.main__comunicate {
-  text-align: center;
-  padding: 20px;
-  font-weight: normal;
-  background: linear-gradient(black, grey);
-
-  background-clip: text; /* estándar */
-  -webkit-background-clip: text; /* Chrome / Edge / Safari */
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-
-  position: relative;
-  font-family: monospace;
-}
-
-.form {
-  max-inline-size: 550px;
-  margin: auto;
-}
-
-.form label {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 0.5em;
-  padding-inline-start: 0.5em;
-}
-
-.form label span {
-  color: #da1414;
-}
-
-.form textarea {
-  box-sizing: border-box;
+.form-control {
   width: 100%;
-  font-size: 1rem;
-  padding: 0.8em;
-  border-radius: 0.5em;
-  border: 1px solid #858c94;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  transition: all 0.25s ease;
 }
 
-.form textarea {
-  margin-block-end: 2em;
-  font-family: inherit;
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }
 
-input::-webkit-input-placeholder {
-  color: #0f0a0a88;
+.form-control:focus {
+  border-color: #0ea5e9;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.25);
+}
+.contact-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+.badges {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 20px;
 }
 
-/*--------------EXTEND-----------*/
+/* TARJETA GLASS */
+.contact-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 35px;
 
-.btn {
-  color: $contactoDerechos;
-  background: white;
-  padding: 5px;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  border-radius: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: 0px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  color: white;
 }
 
-.btn-Enviar {
-  @extend.btn;
-  font-family: cursive;
+/* TITULOS */
+.contact-title {
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
-.btn-Limpiar {
-  @extend .btn;
-  background-color: gray;
-  color: black;
-  margin-left: 70px;
-  font-family: cursive;
+.contact-subtitle {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 14px;
+  opacity: 0.85;
 }
 
-.btn-Enviar:hover {
-  background-color: lightgray;
+/* FORM */
+.form-group {
+  margin-bottom: 18px;
 }
 
-.btn-Limpiar:hover {
-  background-color: whitesmoke;
+.form-control {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+/* BOTONES */
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #0ea5e9, #0284c7);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
 }

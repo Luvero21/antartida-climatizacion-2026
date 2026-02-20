@@ -436,6 +436,57 @@
 
 /*--------------portada-----------*/
 /* CONTENEDOR PRINCIPAL CON IMAGEN */
+.section {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* contenido sobre imagen */
+.hero-content {
+  position: absolute;
+  left: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 520px;
+}
+
+/* tu degradado se mantiene */
+.capa-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .hero-content {
+    left: 20px;
+    right: 20px;
+  }
+}
 .container-portada {
   position: relative;
   width: 100%;
@@ -569,29 +620,34 @@
   align-items: center;
 }
 
+/* BOTON WHATSAPP FLOTANTE */
 .btn__wsp {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 58px;
-  height: 58px;
+  bottom: 25px;
+  right: 25px;
+  width: 55px;
+  height: 55px;
+  background: #25d366;
+  color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #25d366;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   z-index: 9999;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .btn__wsp:hover {
-  transform: scale(1.08);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
+
+/* CLAVE: controla el SVG */
 .btn__wsp svg {
   width: 26px;
   height: 26px;
-  display: block;
 }
 
 .bi-whatsapp {
@@ -1217,96 +1273,116 @@
   box-sizing: border-box;
 }
 
-/*----------ESTILOS CONTACTO---------*/
-.main {
-  margin: 0;
-  background-image: url(/assets/portada.webp);
-  background-size: cover;
-  background-position: center;
-  opacity: 0.7;
+.contact-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../assets/portada.webp") center/cover no-repeat;
 }
 
-.main__comunicate {
-  text-align: center;
-  padding: 20px;
-  font-weight: normal;
-  background: linear-gradient(black, grey);
-  background-clip: text;
-  /* estándar */
-  -webkit-background-clip: text;
-  /* Chrome / Edge / Safari */
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  position: relative;
-  font-family: monospace;
-}
-
-.form {
-  max-inline-size: 550px;
-  margin: auto;
-}
-
-.form label {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 0.5em;
-  padding-inline-start: 0.5em;
-}
-
-.form label span {
-  color: #da1414;
-}
-
-.form textarea {
-  box-sizing: border-box;
+.form-control {
   width: 100%;
-  font-size: 1rem;
-  padding: 0.8em;
-  border-radius: 0.5em;
-  border: 1px solid #858c94;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  transition: all 0.25s ease;
 }
 
-.form textarea {
-  margin-block-end: 2em;
-  font-family: inherit;
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }
 
-input::-webkit-input-placeholder {
-  color: #0f0a0a88;
+.form-control:focus {
+  border-color: #0ea5e9;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.25);
 }
 
-/*--------------EXTEND-----------*/
-.btn, .btn-Limpiar, .btn-Enviar {
-  color: black;
-  background: white;
-  padding: 5px;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  border-radius: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: 0px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
+.contact-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
 }
 
-.btn-Enviar {
-  font-family: cursive;
+.badges {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 20px;
 }
 
-.btn-Limpiar {
-  background-color: gray;
-  color: black;
-  margin-left: 70px;
-  font-family: cursive;
+/* TARJETA GLASS */
+.contact-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  color: white;
 }
 
-.btn-Enviar:hover {
-  background-color: lightgray;
+/* TITULOS */
+.contact-title {
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
-.btn-Limpiar:hover {
-  background-color: whitesmoke;
+.contact-subtitle {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* FORM */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+/* BOTONES */
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #0ea5e9, #0284c7);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
 }
 
 /*------RESPONSIVE------*/
