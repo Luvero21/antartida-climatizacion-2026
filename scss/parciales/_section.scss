@@ -1,0 +1,467 @@
+@import "./reset";
+@import "./variables";
+@import "./responsive";
+.section {
+  position: relative;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding-top: 80px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  &_fila_col {
+    margin: 2px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  &_titulo {
+    padding-bottom: 30px;
+    padding-top: 30px;
+    margin: 0;
+    text-align: center;
+    color: transparent;
+    font-weight: normal;
+    background: linear-gradient(45deg, black, #a9cce3);
+    font-family: monospace;
+  }
+
+  &_info {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 30px 50px;
+    text-align: center;
+    font-family: monospace;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &_hogar {
+    padding-top: 2px;
+    margin-top: 3px;
+    text-align: center;
+  }
+
+  &_servicios {
+    font-family: monospace;
+  }
+
+  &_serv_tit {
+    color: #1e293b;
+    text-align: center;
+    font-weight: 700;
+    font-size: 28px;
+    position: relative;
+    margin: 40px 0 30px;
+  }
+
+  &__frioCalor {
+    font-family: monospace;
+    text-align: center;
+    padding: 20px 0 25px;
+  }
+}
+.section_serv_tit::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: #0ea5e9;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+/*--------------portada-----------*/
+
+/* CONTENEDOR PRINCIPAL CON IMAGEN */
+.container-portada {
+  position: relative;
+  width: 100%;
+  min-height: 520px;
+
+  background-image: url("../assets/portada.webp");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+}
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+.btn-primary {
+  background: rgb(146, 179, 228);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 8px;
+}
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* CAPA DEGRADADA SOBRE LA IMAGEN */
+.capa-gradient {
+  position: absolute;
+  inset: 0;
+
+  /* podés cambiar colores y opacidad */
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.15)
+  );
+
+  display: flex;
+  align-items: center;
+}
+
+/* CONTENEDOR DEL TEXTO */
+.container-details {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+}
+
+/* TEXTO */
+.details {
+  max-width: 620px;
+  color: white;
+  font-family: "Inter", system-ui, sans-serif;
+}
+.hero-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+/* MENSAJE DE CONFIANZA */
+.hero-main {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.hero-sub {
+  font-size: 15px;
+  opacity: 0.9;
+  margin-bottom: 18px;
+}
+
+.section_info {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* BOTON PRINCIPAL */
+.btn-primary {
+  background: linear-gradient(135deg, #6ec6ff, #2196f3);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  border: none;
+  box-shadow: 0 8px 20px rgba(33, 150, 243, 0.35);
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(33, 150, 243, 0.45);
+}
+
+/* BOTON SECUNDARIO */
+.btn-outline {
+  background: linear-gradient(135deg, #b3e5fc, #4fc3f7);
+  color: #0b3d5c;
+  padding: 11px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  transition: all 0.25s ease;
+}
+
+.btn-outline:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(79, 195, 247, 0.35);
+}
+
+/*--------------MAPS--------------*/
+
+$estiloMain: (
+  alineacion: center,
+  Fuente: monospace,
+  negrita: bold,
+);
+
+.section {
+  font-weight: map-get($estiloMain, Fuente);
+  font-family: map-get($estiloMain, negrita);
+  align-items: map-get($estiloMain, alineacion);
+}
+
+.btn__wsp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #25d366;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  }
+
+  svg {
+    width: 26px;
+    height: 26px;
+    display: block;
+  }
+}
+.bi-whatsapp {
+  align-items: center;
+}
+
+.aire {
+  object-fit: cover;
+}
+
+.radiador {
+  object-fit: cover;
+}
+
+.caldera {
+  object-fit: cover;
+}
+
+.heladera {
+  object-fit: cover;
+}
+
+.solhielo {
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+
+.hogarrounded {
+  margin-bottom: 3px;
+}
+
+#carousel {
+  padding: 20px;
+}
+.carousel {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== SECCION SERVICIOS ===== */
+
+.section_servicios {
+  padding: 60px 20px 90px;
+  background: linear-gradient(to bottom, #f1f5f9, #cbd5e1);
+}
+
+/* CONTENEDOR DEL CAROUSEL */
+.section_servicios .carousel {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ⭐ CARD */
+.servicios-card {
+  max-width: 950px;
+  margin: 0 auto;
+  background: white;
+  padding: 18px;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* ⭐ IMAGEN CONTROLADA */
+.servicios-card .carousel-item img {
+  height: 380px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.servicios-card .carousel {
+  border-radius: 14px;
+  overflow: hidden;
+}
+.carousel-item {
+  height: 420px;
+}
+/* ⭐ TITULO PROFESIONAL */
+.section_serv_tit {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #0f172a;
+  text-align: center;
+  margin-bottom: 35px;
+  letter-spacing: -0.3px;
+  position: relative;
+}
+.section_serv_tit::after {
+  content: none;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+.servicios-bajada {
+  text-align: center;
+  color: #475569;
+  font-size: 16px;
+  max-width: 640px;
+  margin: -5px auto 18px;
+  line-height: 1.6;
+}
+
+/* BENEFICIOS */
+.servicios-badges {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.servicios-badges span {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  color: #0ea5e9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* ⭐ INDICADORES MODERNOS */
+.carousel-indicators button {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #94a3b8;
+}
+
+.carousel-indicators .active {
+  background-color: #0ea5e9;
+}
+/* ALTURA CONTROLADA */
+.section_servicios .carousel-item {
+  height: 420px;
+}
+
+/* IMAGEN PROPORCIONAL */
+.section_servicios .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* BOTONES DEL CAROUSEL MAS SUAVES */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  opacity: 0.9;
+}
+.servicios-info {
+  text-align: center;
+  padding: 25px 15px 10px;
+}
+
+.servicios-subtitulo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.servicios-descripcion {
+  font-size: 15px;
+  color: #475569;
+  max-width: 620px;
+  margin: 0 auto 18px;
+  line-height: 1.6;
+}
+
+/* BOTONES CENTRADOS */
+.servicios-acciones {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.slide-label {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.carousel-item {
+  position: relative;
+}
+.servicios-beneficios {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 14px;
+  color: #0ea5e9;
+  flex-wrap: wrap;
+}
+.servicios-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.servicios-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}

@@ -1,0 +1,15 @@
+
+
+node_modules/
+
+css/
+*.map
+*.css
+
+.vscode/
+.DS_Store
+Thumbs.db
+.env
+
+
+

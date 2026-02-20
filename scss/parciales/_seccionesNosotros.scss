@@ -1,0 +1,249 @@
+@import "./variables";
+@import "./responsive";
+@import "../parciales/reset";
+/* tarjeta glass principal */
+.glass {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 30px;
+  margin: 25px auto;
+  max-width: 900px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* valores */
+.valores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.valor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+/* estadísticas */
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  text-align: center;
+  min-width: 160px;
+}
+
+.stat h3 {
+  font-size: 2rem;
+  color: #0dcaf0;
+  margin: 0;
+}
+
+/* CTA */
+.cta-nosotros {
+  text-align: center;
+}
+
+.btn-cta {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #0dcaf0, #0d6efd);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-cta:hover {
+  transform: scale(1.05);
+}
+.nosotros-card,
+.stat,
+.cta-nosotros {
+  margin-bottom: 20px;
+}
+
+.valores {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.valor {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 8px 12px;
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+}
+.sectionNosotros {
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
+
+  /* base gris elegante */
+  background: linear-gradient(180deg, #eef2f6 0%, #e3e8ee 100%);
+}
+
+/* capa espejo animada */
+.sectionNosotros::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.55) 0%,
+    rgba(255, 255, 255, 0.15) 40%,
+    rgba(255, 255, 255, 0.55) 80%
+  );
+
+  backdrop-filter: blur(12px);
+  opacity: 0.6;
+  animation: brilloEspejo 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* degradado suave de profundidad */
+.sectionNosotros::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 20% 20%,
+    rgba(255, 255, 255, 0.5),
+    transparent 60%
+  );
+  opacity: 0.4;
+  pointer-events: none;
+}
+.sectionNosotros {
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
+
+  /* base gris elegante */
+  background: linear-gradient(180deg, #eef2f6 0%, #e3e8ee 100%);
+}
+
+/* capa espejo animada */
+.sectionNosotros::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.55) 0%,
+    rgba(255, 255, 255, 0.15) 40%,
+    rgba(255, 255, 255, 0.55) 80%
+  );
+
+  backdrop-filter: blur(12px);
+  opacity: 0.6;
+  animation: brilloEspejo 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* degradado suave de profundidad */
+.sectionNosotros::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 20% 20%,
+    rgba(255, 255, 255, 0.5),
+    transparent 60%
+  );
+  opacity: 0.4;
+  pointer-events: none;
+}
+/* GLASS */
+.glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* HERO */
+.nosotros-hero {
+  padding: 40px;
+  text-align: center;
+}
+
+.hero-texto h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero-badge {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.hero-badge span {
+  background: rgba(13, 110, 253, 0.1);
+  padding: 8px 14px;
+  border-radius: 20px;
+}
+
+/* IMAGEN */
+.img-nosotros {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* INFO */
+.bloque-info {
+  padding: 30px;
+}
+
+/* STATS */
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  padding: 25px 40px;
+  text-align: center;
+  min-width: 160px;
+}
+
+.stat h3 {
+  font-size: 2rem;
+  color: #0d6efd;
+}
+
+/* CTA */
+.cta-nosotros {
+  padding: 40px;
+  text-align: center;
+}
+
+.btn-cta {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}

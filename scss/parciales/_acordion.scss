@@ -1,0 +1,189 @@
+@import "./variables";
+@import "./responsive";
+@import "./reset";
+
+/* =======================================================
+   SECCIÓN FRÍO / CALOR
+======================================================= */
+.section_frio_calor {
+  padding: 60px 0;
+  border-radius: 20px;
+  background: linear-gradient(to bottom, #f3f4f6, #6b7280);
+}
+
+/* =======================================================
+   BADGES SUPERIORES
+======================================================= */
+.servicios-badges {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.servicios-badges span {
+  background: white;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 14px;
+  color: #0284c7;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* =======================================================
+   TITULO
+======================================================= */
+.section__frioCalor {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* =======================================================
+   CONTENEDOR DEL ACORDEÓN (TARJETA)
+======================================================= */
+.section_frio_calor .accordion-container {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  max-width: 850px;
+  margin: auto;
+  box-shadow: 0 8px 25px rgba(14, 165, 233, 0.12);
+}
+
+/* =======================================================
+   ITEMS DEL ACORDEÓN
+======================================================= */
+.section_frio_calor .accordion-item {
+  border: none !important;
+  border-radius: 12px !important;
+  margin-bottom: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.section_frio_calor .accordion-item:hover {
+  transform: translateY(-2px);
+}
+
+/* =======================================================
+   BOTÓN CERRADO
+======================================================= */
+.section_frio_calor .accordion-button {
+  background-color: transparent !important;
+  background-image: linear-gradient(90deg, #38bdf8, #0ea5e9) !important;
+  color: white !important;
+  font-weight: 600;
+  padding: 16px 20px;
+  box-shadow: none;
+}
+
+/* =======================================================
+   BOTÓN ABIERTO
+======================================================= */
+.section_frio_calor .accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+  background-image: linear-gradient(90deg, #0ea5e9, #0284c7) !important;
+  color: white !important;
+}
+
+/* =======================================================
+   SEGUNDO ITEM (CALOR) COLOR DIFERENTE
+======================================================= */
+.section_frio_calor
+  .accordion-item:last-child
+  .accordion-button:not(.collapsed) {
+  background-image: linear-gradient(90deg, #fb923c, #ef4444) !important;
+}
+
+/* =======================================================
+   CUERPO DEL ACORDEÓN
+======================================================= */
+.section_frio_calor .accordion-body {
+  background: #f8fafc !important;
+  color: #334155;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* =======================================================
+   QUITAR SOMBRA DE FOCO BOOTSTRAP
+======================================================= */
+.section_frio_calor .accordion-button:focus {
+  box-shadow: none !important;
+}
+/* ===== BOOTSTRAP OVERRIDE REAL ===== */
+
+.section_frio_calor {
+  --bs-accordion-bg: transparent;
+  --bs-accordion-border-color: transparent;
+  --bs-accordion-btn-bg: #f1f5f9;
+  --bs-accordion-btn-focus-border-color: transparent;
+  --bs-accordion-active-bg: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  --bs-accordion-active-color: white;
+}
+
+/* botón */
+.section_frio_calor .accordion-button {
+  font-weight: 600;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+/* hover elegante */
+.section_frio_calor .accordion-button:hover {
+  transform: scale(1.02);
+}
+
+/* tarjeta */
+.section_frio_calor .accordion-item {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.section_frio_calor .accordion-item:first-child {
+  --bs-accordion-active-bg: linear-gradient(90deg, #38bdf8, #0ea5e9);
+}
+
+.section_frio_calor .accordion-item:last-child {
+  --bs-accordion-active-bg: linear-gradient(90deg, #fb923c, #ef4444);
+}
+/* ===== OVERRIDE REAL BOOTSTRAP ===== */
+
+.section_frio_calor .accordion .accordion-button {
+  background: #f1f5f9;
+  color: #0f172a;
+  font-weight: 600;
+  border-radius: 12px;
+}
+
+/* estado abierto */
+.section_frio_calor .accordion .accordion-button:not(.collapsed) {
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  color: white;
+}
+
+/* cuerpo */
+.section_frio_calor .accordion .accordion-body {
+  background: #f8fafc;
+  color: #334155;
+}
+
+/* tarjeta */
+.section_frio_calor .accordion .accordion-item {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* sacar borde focus bootstrap */
+.section_frio_calor .accordion-button:focus {
+  box-shadow: none;
+}
+.section_frio_calor {
+  position: relative;
+  z-index: 1;
+}

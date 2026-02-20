@@ -1,0 +1,98 @@
+@import "../parciales/variables";
+@import "../parciales/responsive";
+@import "../parciales/reset";
+
+/*----------ESTILOS CONTACTO---------*/
+.main {
+  margin: 0;
+  background-image: url(/assets/portada.webp);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+}
+
+.main__comunicate {
+  text-align: center;
+  padding: 20px;
+  font-weight: normal;
+  background: linear-gradient(black, grey);
+
+  background-clip: text; /* estándar */
+  -webkit-background-clip: text; /* Chrome / Edge / Safari */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  position: relative;
+  font-family: monospace;
+}
+
+.form {
+  max-inline-size: 550px;
+  margin: auto;
+}
+
+.form label {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 0.5em;
+  padding-inline-start: 0.5em;
+}
+
+.form label span {
+  color: #da1414;
+}
+
+.form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.8em;
+  border-radius: 0.5em;
+  border: 1px solid #858c94;
+}
+
+.form textarea {
+  margin-block-end: 2em;
+  font-family: inherit;
+}
+
+input::-webkit-input-placeholder {
+  color: #0f0a0a88;
+}
+
+/*--------------EXTEND-----------*/
+
+.btn {
+  color: $contactoDerechos;
+  background: white;
+  padding: 5px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+.btn-Enviar {
+  @extend.btn;
+  font-family: cursive;
+}
+
+.btn-Limpiar {
+  @extend .btn;
+  background-color: gray;
+  color: black;
+  margin-left: 70px;
+  font-family: cursive;
+}
+
+.btn-Enviar:hover {
+  background-color: lightgray;
+}
+
+.btn-Limpiar:hover {
+  background-color: whitesmoke;
+}

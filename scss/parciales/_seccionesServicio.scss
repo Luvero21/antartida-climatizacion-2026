@@ -1,0 +1,131 @@
+@import "./variables";
+@import "./responsive";
+@import "../parciales/reset";
+
+/*------------------ESTILO SERVICIOS-----------*/
+.main__serv {
+  padding: 90px 20px;
+
+  background: linear-gradient(180deg, #e2e8f0 0%, #d6dee7 50%, #cfd8e3 100%);
+}
+
+/* TITULO */
+.main__servicios {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+
+  background: linear-gradient(90deg, #0d6efd, #0dcaf0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.main__servicios::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+}
+.main__desc {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 50px;
+}
+
+/* LISTA */
+.servicios__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* CARD */
+.servicio {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 30px;
+
+  padding: 32px;
+  border-radius: 20px;
+
+  /* vidrio gris visible */
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(0, 0, 0, 0.05);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
+  transition: all 0.35s ease;
+}
+.servicio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: 0.7s;
+}
+
+.servicio:hover::before {
+  left: 140%;
+}
+.servicio:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.servicio__info h3 {
+  color: #0ea5e9;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.servicio__info p {
+  color: #334155;
+}
+
+.servicio__img img {
+  width: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.servicio:hover img {
+  transform: scale(1.05);
+}
+
+/* alternar imagen */
+.servicio:nth-child(even) {
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.servicio:nth-child(even) .servicio__img {
+  order: -1;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .servicio {
+    grid-template-columns: 1fr;
+  }
+}
