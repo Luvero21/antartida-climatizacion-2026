@@ -1,15 +1,13 @@
 
 
 node_modules/
-
-css/
-*.map
-*.css
-
 .vscode/
 .DS_Store
 Thumbs.db
 .env
+
+# ignorar solo source maps
+*.map
 
 
 
