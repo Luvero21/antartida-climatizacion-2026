@@ -4,14 +4,15 @@
 .section {
   position: relative;
   display: block;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: white;
   padding-top: 80px;
 
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  overflow: hidden;
 
   &_fila_col {
     margin: 2px;
@@ -78,17 +79,11 @@
 /*--------------portada-----------*/
 
 /* CONTENEDOR PRINCIPAL CON IMAGEN */
-.section {
-  position: relative;
-  width: 100%;
-  height: 85vh;
-  overflow: hidden;
-}
 
 .hero-slider {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 60vh;
 }
 
 .hero-slide {
@@ -264,13 +259,6 @@ $estiloMain: (
   Fuente: monospace,
   negrita: bold,
 );
-
-.section {
-  font-family: map-get($estiloMain, Fuente);
-  font-weight: map-get($estiloMain, negrita);
-
-  align-items: map-get($estiloMain, alineacion);
-}
 
 /* BOTON WHATSAPP FLOTANTE */
 .btn__wsp {
