@@ -144,57 +144,49 @@
   <!-------------------------FIN DE MAIN-------------------------->
   <!-------------------------INICIA FOOTER-------------------------->
 <footer class="footer">
-
   <div class="footer-container">
 
-    <!-- Marca -->
-    <div class="footer-col text-center ">
+    <!-- Marca + contacto -->
+    <div class="footer-col footer-brand">
+      <img src="../assets/solhielo.jpg" alt="Climatización Antártida logo" class="footer-logo">
       <h4>Climatización Antártida</h4>
-      <p>Servicio técnico en refrigeración y calefacción para hogares, comercios e industrias.</p>
-      <p class="footer-contacto">
-        📍 Godoy Cruz, Mendoza<br>
-        📞 +54 261 596 4429
-      </p>
+      <p>📍 Godoy Cruz, Mendoza</p>
+      <p>📞 +54 261 596 4429</p>
     </div>
 
-    <!-- Mapa -->
-    <div class="footer-col text-center">
-      <h4>¿Cómo llegar?</h4>
-      <iframe
-        src="https://www.google.com/maps?q=Godoy+Cruz+Mendoza&output=embed"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+    <!-- Servicios rápidos -->
+    <div class="footer-col">
+      <h4>Servicios de Climatización</h4>
+      <p>Instalación</p>
+      <p>Mantenimiento</p>
+      <p>Reparaciones</p>
+      <p>FRIO - CALOR</p>
     </div>
 
-    <!-- Redes -->
-    <div class="footer-col text-center">
-      <h4>Seguinos</h4>
+    <!-- Redes + CTA -->
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <a href="https://api.whatsapp.com/send?phone=542615964429"
+   target="_blank"
+   class="footer-btn">
+   <i class="bi bi-whatsapp"></i>
+   WhatsApp
+</a>
+      <a href="#" class="footer-link">
+  <i class="bi bi-instagram"></i> Instagram
+</a>
 
-      <a href="https://instagram.com/antartidarefrigeracion" target="_blank" class="footer-social">
-        Instagram
-      </a>
-
-      <a href="https://www.facebook.com/Ant%C3%A1rtida-Refrigeraci%C3%B3n-1098899540163575"
-         target="_blank"
-         class="footer-social">
-        Facebook
-      </a>
-
-      <a href="https://api.whatsapp.com/send?phone=+542615964429"
-         target="_blank"
-         class="footer-social footer-wsp">
-        WhatsApp
-      </a>
+<a href="#" class="footer-link">
+  <i class="bi bi-facebook"></i> Facebook
+</a>
     </div>
 
   </div>
 
   <div class="footer-bottom">
-    © 2026 Climatización Antártida — Todos los derechos reservados
-    <span>💜 Luciana Reales Santana</span>
+    © 2026 Climatización Antártida — Todos los derechos reservados  
+    <div class="footer-credit">💜 Luciana Reales Santana</div>
   </div>
-
 </footer>
   <!-------------------------FIN DE FOOTER-------------------------->
 
@@ -205,6 +197,25 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
   </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.getElementById("header");
+  const menu = document.getElementById("menu");
+  const toggle = document.getElementById("menu-toggle");
+
+  if (header) {
+    window.addEventListener("scroll", () => {
+      header.classList.toggle("scrolled", window.scrollY > 50);
+    });
+  }
+
+  if (toggle && menu) {
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  }
+});
+</script>
 </body>
 
 </html>
