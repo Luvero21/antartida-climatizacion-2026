@@ -9,7 +9,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/espaciomain.css">
 
  <meta property="og:type" content="website">
@@ -55,7 +54,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 </head>
 <body>
 
-  <!--------------INICIA HEADER-------------------------------->
  <header class="header" id="header">
   <div class="nav">
 
@@ -84,14 +82,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 </header>
 
 
-  <!---------------------FINALIZA HEADER------------------------>
-  <!---------------------INICIA MAIN --------------------------->
-
   <section class="section">
 
   <div class="hero-slider">
 
-    <!-- AIRE ACONDICIONADO -->
     <div class="hero-slide active"
          style="background-image:url('assets/airecentral.webp')">
 
@@ -108,7 +102,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       </div>
     </div>
 
-    <!-- CALDERAS -->
     <div class="hero-slide"
          style="background-image:url('assets/caldera.webp')">
 
@@ -125,7 +118,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       </div>
     </div>
 
-    <!-- HELADERAS -->
+
     <div class="hero-slide"
          style="background-image:url('assets/nofrostt.webp')">
 
@@ -175,15 +168,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     <img src="./assets/calde.webp" alt="Servicio de calderas en Mendoza">
     <div class="overlay">
       <h3>Calderas</h3>
-      <p>Instalación, reparación y mantenimiento</p>
+      <p>Reparación y mantenimiento de calderas.</p>
     </div>
   </a>
 
   <a href="#contacto" class="servicio-destacado">
     <img src="./assets/heladeranofrost.webp" alt="Reparación heladeras no frost">
     <div class="overlay">
-      <h3>Heladeras No Frost</h3>
-      <p>Reparacion de heladeras convencionales y No frost.</p>
+      <h3>Heladeras</h3>
+      <p>Reparacion de heladeras convencionales y No frost, verticales, freezer, etc</p>
     </div>
   </a>
 
@@ -191,76 +184,45 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     <img src="./assets/aireacon.webp" alt="Reparación aire acondicionado Mendoza">
     <div class="overlay">
       <h3>Aires acondicionados</h3>
-      <p>Reparación · carga de gas · service</p>
+      <p>Reparación · manteniminto · service</p>
     </div>
   </a>
 
 </div>
+<div class="servicios-card">
 
+  <div class="custom-carousel">
+    <div class="carousel-track">
 
-  <div class="servicios-card">
-
-    <div id="carouselServicios"
-         class="carousel slide"
-         data-bs-ride="carousel">
-
-      <!-- indicadores -->
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="2"></button>
-        <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="3"></button>
-        <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="4"></button>
-        <button type="button" data-bs-target="#carouselServicios" data-bs-slide-to="5"></button>
+      <div class="carousel-item">
+        <img src="./assets/calefa.webp" loading="lazy">
+        <div class="slide-label">Reparación de calderas</div>
       </div>
 
-      <!-- slides -->
-      <div class="carousel-inner">
+      <div class="carousel-item">
+        <img src="./assets/air.webp" loading="lazy">
+        <div class="slide-label">Aires acondicionados</div>
+      </div>
 
-        <div class="carousel-item active">
-  <img src="./assets/calde.webp">
-  <div class="slide-label">Reparación y mantenimiento de calderas</div>
+      <div class="carousel-item">
+        <img src="./assets/calefacccioncentral.webp" loading="lazy">
+        <div class="slide-label">Calefacción central</div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="./assets/solar.webp" loading="lazy">
+        <div class="slide-label">Climatización solar</div>
+      </div>
+
+    </div>
+
+    <button class="carousel-btn prev">‹</button>
+    <button class="carousel-btn next">›</button>
+  </div>
+
 </div>
 
 
-        <div class="carousel-item">
-          <img src="./assets/air.webp" alt="Aire acondicionado">
- <div class="slide-label">Reparación y mantenimiento de Aires acondicionados</div>
-        </div>
-
-        <div class="carousel-item">
-          <img src="./assets/calefacccioncentral.webp" alt="Calefacción central">
- <div class="slide-label">Reparación y mantenimiento de Calefacción central.</div>
-        </div>
-
-        <div class="carousel-item">
-          <img src="./assets/caldera.webp" alt="Reparación de caldera">
- <div class="slide-label">Detección y reparación de fugas en circuitos de calefacción por agua </div>
-        </div>
-
-        <div class="carousel-item">
-          <img src="./assets/solar.webp" alt="Climatización de piscina">
- <div class="slide-label">Climatizacion de piscinas con energia Solar </div>
-        </div>
-
-        <div class="carousel-item">
-          <img src="./assets/heladeranofrost.webp" alt="Heladera No Frost">
- <div class="slide-label">Reparación de heladeras NO frost y convencionales- todas las marcas</div>
-        </div>
-
-      </div>
-
-      <!-- controles -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselServicios" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselServicios" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
-
-    </div>
-  </div>
 <div class="servicios-info">
 
   <h3 class="servicios-subtitulo">
@@ -274,7 +236,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <div class="servicios-beneficios">
   <span>✔ Garantía escrita</span>
   <span>✔ Honestidad</span>
-  <span>✔ Técnicos matriculados</span>
+  <span>✔ Técnico matriculados</span>
 <span>✔ Compromiso</span>
 </div>
 
@@ -285,7 +247,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       Solicitar presupuesto
     </a>
 
-    <a href="#contacto" class="btn-outline">
+    <a href="https://api.whatsapp.com/send?phone=+542615964429" class="btn-outline">
       Consulta técnica
     </a>
   </div>
@@ -296,72 +258,40 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <section class="section_frio_calor">
 <div class="servicios-badges">
   <span>Mantenimiento</span>
-  <span>Instalación</span>
+  <span>Reparación</span>
   <span>Garantía escrita</span>
 </div>
 
   <h2 class="section__frioCalor">Frío / Calor</h2>
 
-  <div class="accordion-container">
-    <div class="accordion" id="accordionFlushExample">
+<div class="accordion-custom">
 
-      <!-- FRIO -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseOne">
-            ❄️ FRÍO
-          </button>
-        </h2>
-
-        <div id="collapseOne"
-          class="accordion-collapse collapse"
-          data-bs-parent="#accordionFlushExample">
-
-          <div class="accordion-body">
-            Contamos con amplia experiencia en mantenimiento de equipos split, VRV, inverter, fan coil,
-            chillers y torres de enfriamiento.
-
-            <br><br>
-
-            ✔ Mantenimiento preventivo integral  
-            ✔ Recarga de refrigerantes y detección de fugas  
-            ✔ Control de consumo eléctrico y temperaturas  
-            ✔ Reparación de heladeras, freezers y cámaras frigoríficas
-          </div>
-        </div>
-      </div>
-
-      <!-- CALOR -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseTwo">
-            🔥 CALOR
-          </button>
-        </h2>
-
-        <div id="collapseTwo"
-          class="accordion-collapse collapse"
-          data-bs-parent="#accordionFlushExample">
-
-          <div class="accordion-body">
-            Servicio técnico en sistemas de calefacción central por losa radiante y radiadores.
-
-            <br><br>
-
-            ✔ Reparación y mantenimiento de calderas  
-            ✔ Detección y reparación de fugas hidráulicas  
-            ✔ Limpieza de quemadores a gas y petróleo  
-            ✔ Instalación de colectores solares para piscinas
-          </div>
-        </div>
-      </div>
-
+  <div class="accordion-item">
+    <button class="accordion-header">❄️ FRÍO</button>
+    <div class="accordion-content">
+      <p>
+        Mantenimiento de equipos split, VRV, inverter, chillers.
+        ✔ Detección de fugas  
+        ✔ Reparaciones
+        ✔ Recarga de gas  
+      </p>
     </div>
   </div>
+
+  <div class="accordion-item">
+    <button class="accordion-header">🔥 CALOR</button>
+    <div class="accordion-content">
+      <p>
+        Sistemas de calefacción central.
+        ✔ Calderas  
+        ✔ Radiadores  
+        ✔ Energía solar
+      </p>
+    </div>
+  </div>
+
+</div>
+
 </section>
 
  <section class="sectionDos">
@@ -417,20 +347,30 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         </div>
         <p>Atención impecable, diagnóstico preciso y solución efectiva.</p>
       </div>
+<div class="testimonio-card">
+        <div class="cliente">
+          <div class="avatar">G</div>
+          <div>
+            <h6>Guillermo alegre</h6>
+            <div class="estrellas">★★★★★</div>
+          </div>
+        </div>
+        <p>Excelente trabajo muy prolijo y eficiente. Muy recomendable.</p>
+      </div>
 
     </div>
   </div>
+<button class="prev-test">‹</button>
+<button class="next-test">›</button>
 
 </section>
 
 
-  <!-----------------------------FINALIZA MAIN----------------------------->
-  <!-----------------------------INICIA FOOTER----------------------------->
 
 <footer class="footer">
   <div class="footer-container">
 
-    <!-- Marca + contacto -->
+ 
     <div class="footer-col footer-brand">
       <img src="assets/solhielo.jpg" alt="Climatización Antártida logo" class="footer-logo">
       <h4>Climatización Antártida</h4>
@@ -438,7 +378,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       <p>📞 +54 261 596 4429</p>
     </div>
 
-    <!-- Servicios rápidos -->
+
     <div class="footer-col">
       <h4>Servicios de Climatización</h4>
       <p>Tecnología de avanzada en diagnósticos</p>
@@ -447,7 +387,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       <p>FRIO - CALOR</p>
     </div>
 
-    <!-- Redes + CTA -->
+
     <div class="footer-col">
       <h4>Contacto</h4>
       <a href="https://api.whatsapp.com/send?phone=542615964429"
@@ -472,71 +412,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     <div class="footer-credit">💜 Luciana Reales Santana</div>
   </div>
 </footer>
+<script src="js/main.js" defer></script>
 
-  <!-----------------------FINALIZA FOOTER--------------------->
-
-  <script>
-    AOS.init();
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-  </script>
-<script>
-const header = document.getElementById("header");
-const menu = document.getElementById("menu");
-const toggle = document.getElementById("menu-toggle");
-
-window.addEventListener("scroll", () => {
-  header.classList.toggle("scrolled", window.scrollY > 50);
-});
-
-toggle.addEventListener("click", () => {
-  menu.classList.toggle("active");
-});
-</script>
-<!-- TU CONTENIDO -->
-
-<script>
-const track = document.querySelector(".carousel-track");
-const cards = document.querySelectorAll(".testimonio-card");
-
-let index = 0;
-
-function moveCarousel() {
-  const cardWidth = cards[0].offsetWidth + 25;
-  index++;
-
-  if (index > cards.length - getVisibleCards()) {
-    index = 0;
-  }
-
-  track.style.transform = `translateX(-${index * cardWidth}px)`;
-}
-
-function getVisibleCards() {
-  if (window.innerWidth <= 600) return 1;
-  if (window.innerWidth <= 900) return 2;
-  return 3;
-}
-
-setInterval(moveCarousel, 4000);
-</script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll(".hero-slide");
-
-  if (!slides.length) return;
-
-  let currentSlide = 0;
-
-  setInterval(() => {
-    slides[currentSlide].classList.remove("active");
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add("active");
-  }, 5000);
-});
-</script>
+ 
 </body>
 </html>
 

@@ -1,4 +1,4 @@
-@import "../parciales/variables";
+
 @import "../parciales/responsive";
 @import "../parciales/reset";
 
@@ -48,7 +48,6 @@
   margin-bottom: 20px;
 }
 
-/* TARJETA GLASS */
 .contact-card {
   width: 100%;
   max-width: 600px;
@@ -63,7 +62,6 @@
   color: white;
 }
 
-/* TITULOS */
 .contact-title {
   text-align: center;
   margin-bottom: 8px;
@@ -78,7 +76,7 @@
   opacity: 0.85;
 }
 
-/* FORM */
+
 .form-group {
   margin-bottom: 18px;
 }
@@ -92,7 +90,7 @@
   font-size: 15px;
 }
 
-/* BOTONES */
+
 .form-actions {
   display: flex;
   justify-content: center;

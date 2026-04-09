@@ -133,12 +133,23 @@
   .btn-outline {
     width: fit-content;
   }
+
+  .servicio {
+    grid-template-columns: 1fr;
+  }
+.logo span{
+font-size: 17px;}
+.menu-toggle {
+        font-size: 20px;
+    }
+.footer-col{
+display: none;}
 }
-/* MOBILE */
+
 @media (max-width: 900px) {
   .menu {
     position: absolute;
-    top: 70px; /* altura del header aprox */
+    top: 70px;
     right: 15px;
 
     display: none;
@@ -148,11 +159,11 @@
     padding: 20px 25px;
     border-radius: 16px;
 
-    width: 220px; /* ancho del panel */
-    height: auto; /* 👈 solo lo que mide el contenido */
+    width: 220px; 
+    height: auto; 
 
-    background: rgba(255, 255, 255, 0.88); /* 👈 transparencia */
-    backdrop-filter: blur(8px); /* efecto vidrio (opcional) */
+    background: rgba(255, 255, 255, 0.88); 
+    backdrop-filter: blur(8px); 
 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   }
@@ -229,5 +240,27 @@
 
   .menu a {
     color: #ecf0f1;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicio {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 900px) {
+  .servicios-destacados {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 900px) {
+  .testimonio-card {
+    min-width: calc(50% - 13px);
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonio-card {
+    min-width: 100%;
   }
 }

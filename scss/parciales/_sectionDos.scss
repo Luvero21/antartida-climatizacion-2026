@@ -1,8 +1,7 @@
 @import "./reset";
-@import "./variables";
 @import "./responsive";
 
-/* ===== SECCION ===== */
+
 .sectionDos {
   width: 100%;
   padding: 80px 20px;
@@ -10,7 +9,6 @@
   position: relative;
 }
 
-/* luz suave decorativa */
 .sectionDos::before {
   content: "";
   position: absolute;
@@ -23,7 +21,7 @@
   pointer-events: none;
 }
 
-/* ===== HEADER ===== */
+
 .opiniones-header {
   text-align: center;
   margin-bottom: 45px;
@@ -42,7 +40,7 @@
   color: #6b7280;
 }
 
-/* ===== GRID / CAROUSEL ===== */
+
 .carousel {
   max-width: 1100px;
   margin: 0 auto;
@@ -57,12 +55,12 @@
   transition: transform 0.6s ease;
 }
 
-/* ===== CARD GLASS PREMIUM ===== */
+
 .testimonio-card {
   position: relative;
   overflow: hidden;
-
-  min-width: calc(33.333% - 17px);
+min-width: 320px;
+  max-width: 320px; 
 
   background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(14px);
@@ -77,9 +75,10 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.7);
 
   transition: all 0.35s ease;
+flex-shrink: 0;
 }
 
-/* línea superior pro */
+
 .testimonio-card::after {
   content: "";
   position: absolute;
@@ -91,7 +90,7 @@
   background: linear-gradient(to right, #38bdf8, #60a5fa);
 }
 
-/* quote decorativa */
+
 .testimonio-card::before {
   content: "“";
   position: absolute;
@@ -101,15 +100,29 @@
   color: rgba(0, 0, 0, 0.06);
   font-family: serif;
 }
+.prev-test, .next-test {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #111;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 8px;
+}
 
-/* hover premium */
+.prev-test { left: 10px; }
+.next-test { right: 10px; }
+
+
 .testimonio-card:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
-/* ===== CLIENTE ===== */
 .cliente {
   display: flex;
   align-items: center;
@@ -136,22 +149,12 @@
   letter-spacing: 2px;
 }
 
-/* ===== TEXTO ===== */
+
 .testimonio-card p {
   color: #374151;
   line-height: 1.6;
   font-size: 0.95rem;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  .testimonio-card {
-    min-width: calc(50% - 13px);
-  }
-}
 
-@media (max-width: 600px) {
-  .testimonio-card {
-    min-width: 100%;
-  }
-}
+
