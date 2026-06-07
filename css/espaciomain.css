@@ -2341,158 +2341,82 @@
   box-sizing: border-box;
 }
 
-/* ==========================
-   SECCION NOSOTROS
-========================== */
-.sectionNosotros {
-  padding: 100px 0;
-  background: #f5f8fc;
+.quienes-somos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-top: 80px;
 }
 
-/* CONTENEDOR */
-.sectionNosotros .container {
-  max-width: 1200px;
+.quienes-img img {
+  width: 100%;
+  object-fit: cover;
 }
 
-/* ==========================
-   HERO
-========================== */
-.nosotros-hero {
-  background: linear-gradient(135deg, #0a2240, #143b72);
-  color: white;
-  padding: 70px 50px;
-  border-radius: 25px;
-  text-align: center;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-  margin-bottom: 80px;
-}
-
-.hero-texto h1 {
-  font-size: 3rem;
+.quienes-info span {
+  color: #0d6efd;
   font-weight: 700;
-  margin-bottom: 20px;
+  letter-spacing: 3px;
 }
 
-.hero-texto p {
-  font-size: 1.15rem;
-  max-width: 800px;
-  margin: auto;
-  opacity: 0.95;
+.quienes-info h2 {
+  font-size: 3rem;
+  margin: 20px 0;
+  color: #0a2240;
 }
 
-.hero-badge {
-  margin-top: 35px;
+.quienes-info p {
+  line-height: 1.8;
+  padding-left: 20px;
+}
+
+.quienes-info ul {
+  margin-top: 30px;
+}
+
+.quienes-info li {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.quienes-info h1 {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  margin-bottom: 30px;
+}
+
+.quienes-info {
+  max-width: 600px;
+}
+
+.valores {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
+  margin-top: 30px;
 }
 
-.hero-badge span {
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 12px 20px;
-  border-radius: 30px;
-  font-weight: 600;
-}
-
-/* ==========================
-   BLOQUES
-========================== */
-.bloque-info {
-  background: white;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  height: 100%;
-}
-
-.bloque-info h2 {
-  color: #0a2240;
-  margin-bottom: 20px;
-  font-weight: 700;
-}
-
-.bloque-info p {
-  line-height: 1.9;
-  color: #555;
-}
-
-/* ==========================
-   IMAGEN
-========================== */
-.img-nosotros {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
-
-/* ==========================
-   ESTADISTICAS
-========================== */
-.stats-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-  margin-top: 80px;
-}
-
-.stat {
-  background: white;
-  text-align: center;
-  padding: 35px;
-  border-radius: 18px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-}
-
-.stat h3 {
-  font-size: 3rem;
-  color: #0d6efd;
-  margin-bottom: 10px;
-}
-
-.stat p {
-  font-weight: 600;
-  color: #444;
-}
-
-/* ==========================
-   CTA
-========================== */
-.cta-nosotros {
-  background: linear-gradient(135deg, #0d6efd, #00b4ff);
-  color: white;
-  padding: 60px;
-  text-align: center;
-  border-radius: 25px;
-  margin-top: 80px;
-}
-
-.cta-nosotros h3 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-.cta-nosotros p {
-  font-size: 1.1rem;
-}
-
-.btn-cta {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 15px 35px;
-  background: white;
-  color: #0d6efd;
+.valores span {
+  background: #fff;
+  border: 1px solid #dbe7f7;
+  padding: 12px 18px;
   border-radius: 50px;
-  text-decoration: none;
-  font-weight: 700;
-  transition: 0.3s;
+  font-weight: 600;
+  color: #0a2240;
 }
 
-.btn-cta:hover {
-  transform: translateY(-3px);
+.stats-section {
+  background: white;
+  border-radius: 25px;
+  padding: 50px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.container-nosotros {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
 }
 
 /* ==========================
