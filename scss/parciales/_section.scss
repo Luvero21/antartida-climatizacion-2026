@@ -79,22 +79,23 @@
 .hero-slider {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: auto !important;
+  aspect-ratio: 16 / 9
+
 }
 
 .hero-slide {
+  width: 100%;
+  height: 100%;
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center;
-  opacity: 0;
   transition: opacity 0.8s ease;
+background-repeat: no-repeat;
+background-position: center;
+
 }
 
-.hero-slide.active {
-  opacity: 1;
-  z-index: 2;
-}
 
 
 .hero-content {
@@ -102,15 +103,8 @@
   left: 8%;
   top: 50%;
   transform: translateY(-50%);
-  color: white;
-  max-width: 520px;
-}
-
-
-.capa-gradient {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+  color: black;
+  max-width: 80%;
 }
 
 
@@ -148,17 +142,11 @@
 .capa-gradient {
   position: absolute;
   inset: 0;
-
-
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.55),
-    rgba(0, 0, 0, 0.15)
-  );
-
+  background-color: rgba(255, 255, 255, 0.4);
   display: flex;
   align-items: center;
 }
+
 
 
 .container-details {
